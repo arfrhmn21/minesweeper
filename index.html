@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>MineSweeper</title>
+    </head>
+    <body>
+        <h2>Minesweeper</h2>
+
+        <span id="watermark">
+            <a href="https://instagram.com/arfrhmn21_">@arfrhmn21_</a>
+        </span>
+
+        <div class="mode-selector">
+            <label for="game-mode">Pilih Mode:</label>
+            <select id="game-mode" onchange="setGameMode(this.value)">
+                <option value="easy" selected>Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+
+        <div class="controls">
+            <div>🚩 <span id="mines-left">10</span></div>
+            <div>⏰ <span id="timer">0</span> detik</div>
+            <button id="reset-button" onclick="resetGame()">Mulai Ulang</button>
+        </div>
+
+        <div id="board"></div>
+        <div id="game-status"></div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
