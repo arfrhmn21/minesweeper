@@ -103,6 +103,8 @@ function resetGame() {
     timeLeft = 0;
     displayStatus("", "");
     flagsLeft = mines;
+    const timerEl = document.getElementById("timer");
+    if (timerEl) timerEl.textContent = timeLeft;
     updateMinesLeftDisplay();
     renderEmptyBoard();
     enableCellEvents();
